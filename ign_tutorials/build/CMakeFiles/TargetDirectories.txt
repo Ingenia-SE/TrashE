@@ -1,0 +1,3 @@
+/home/psoler/ign_tutorials/build/CMakeFiles/edit_cache.dir
+/home/psoler/ign_tutorials/build/CMakeFiles/rebuild_cache.dir
+/home/psoler/ign_tutorials/build/CMakeFiles/lidar_node.dir
