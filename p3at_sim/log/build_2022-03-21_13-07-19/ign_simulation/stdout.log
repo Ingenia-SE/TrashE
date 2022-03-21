@@ -1,0 +1,110 @@
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found urdf: 2.4.0 (/opt/ros/foxy/share/urdf/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/pedro/TrashE/p3at_sim/build/ign_simulation
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//launch/p3at_empty.launch.py
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//launch/x1_empty.launch.py
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Asphalt.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Cables_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Chainlink_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Chainlink_Transparency.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Door_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Entrance.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/GroundDirt_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Light_Plastic_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Light_Plastic_Emissive.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Pipes_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Rails_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/RockWall_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/RustyMetal_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/Wood_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/materials/textures/YellowPlastic_Albedo.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_01.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_02.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_03.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_04.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_05.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_06.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_07.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_08.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_09.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_Section_10.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/meshes/Edgar_StartingArea.DAE
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/model.config
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/model.sdf
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/thumbnails/1.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/thumbnails/2.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/thumbnails/3.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/thumbnails/4.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/cave/thumbnails/5.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/meshes/chassis.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/meshes/wheel.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/model-1_3.sdf
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/model-1_4.sdf
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/model.config
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/model.sdf
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/thumbnails/1.png
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/thumbnails/2.png
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/thumbnails/3.png
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/thumbnails/4.png
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/pioneer3at/thumbnails/5.png
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/materials/textures/headlight.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/materials/textures/led.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/accessories/kinect.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/accessories/kinect.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/accessories/kinect.tga
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/chassis.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/headlight.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/headlight_lamp.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/led.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/led_lamp.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/sick-lms1xx-bracket.stl
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/top_plate.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/meshes/wheel.dae
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/model.config
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/model.sdf
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/thumbnails/1.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/thumbnails/2.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/thumbnails/3.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/thumbnails/4.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//models/x1/thumbnails/5.jpg
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//worlds/cave_world.sdf
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//worlds/empty.sdf
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation//ign/gui.config
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/environment/ign_simulation.sh
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/environment/ign_simulation.dsv
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ament_index/resource_index/package_run_dependencies/ign_simulation
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ament_index/resource_index/parent_prefix_path/ign_simulation
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/environment/ament_prefix_path.sh
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/environment/ament_prefix_path.dsv
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/environment/path.sh
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/environment/path.dsv
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/local_setup.bash
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/local_setup.sh
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/local_setup.zsh
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/local_setup.dsv
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/package.dsv
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ament_index/resource_index/packages/ign_simulation
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/cmake/ign_simulationConfig.cmake
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/cmake/ign_simulationConfig-version.cmake
+-- Symlinking: /home/pedro/TrashE/p3at_sim/install/ign_simulation/share/ign_simulation/package.xml
