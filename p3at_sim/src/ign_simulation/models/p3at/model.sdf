@@ -3,6 +3,8 @@
   <model name="p3at">
     <pose>0 0 0.180 0 0 0</pose>
     <static>false</static>
+    
+    <!--...................... LINK CHASSIS.......................-->
     <link name="chassis">
       <inertial>
         <mass>14.0</mass>
@@ -29,7 +31,67 @@
           </mesh>
         </geometry>
       </visual>
+      
+      <!-- ....SENSORS... -->
+      
+      <!-- LIDAR -->
+    	<sensor name='lidar' type='gpu_lidar'>"
+    		<pose>0 0 0.1 0 0 0</pose>
+    		<topic>lidar</topic>
+    		<update_rate>10</update_rate>
+    		<ray>
+        		<scan>
+            		<horizontal>
+                		<samples>640</samples>
+                		<resolution>1</resolution>
+                		<min_angle>-1.396263</min_angle>
+                		<max_angle>1.396263</max_angle>
+            		</horizontal>
+            		<vertical>
+                		<samples>1</samples>
+                		<resolution>0.01</resolution>
+                		<min_angle>0</min_angle>
+                		<max_angle>0</max_angle>
+            		</vertical>
+        		</scan>
+        		<range>
+            		<min>0.08</min>
+            		<max>10.0</max>
+            		<resolution>0.01</resolution>
+        		</range>
+    		</ray>
+    		<always_on>1</always_on>
+    		<visualize>true</visualize>
+    	</sensor>
+    	
+      <!-- KINECT-->
+    	<sensor name="kinect" type="camera">
+		<always_on>1</always_on>
+		<update_rate>30</update_rate>
+		<visualize>1</visualize>
+		<pose>-0.15 0 0.15 0 0 0</pose>
+		<topic>kinect</topic>
+		<camera name="kinect">
+			<horizontal_fov>1.21126</horizontal_fov>
+			<image>
+				<width>640</width>
+				<height>480</height>
+				<format>RGB_INT8</format>
+			</image>
+			<clip>
+				<near>0.1</near>
+				<far>100</far>
+			</clip>
+			<noise>
+				<type>gaussian</type>
+				<mean>0</mean>
+				<stddev>0.007</stddev>
+			</noise>
+				</camera>
+		</sensor>
     </link>
+    
+    <!--...................... LINK RIGHT FRONT WHEEL .......................-->
     <link name="right_front_wheel">
       <pose>0.125 -0.201 -0.06 1.5707 0 0</pose>
 
@@ -71,6 +133,8 @@
         </geometry>
       </visual>
     </link>
+    
+    <!--...................... LINK LEFT FRONT WHEEL .......................-->
     <link name="left_front_wheel">
       <pose>0.125 0.201 -0.06 1.5707 0 0</pose>
 
@@ -112,6 +176,8 @@
         </geometry>
       </visual>
     </link>
+    
+    <!--...................... LINK RIGHT REAR WHEEL .......................-->
     <link name="right_rear_wheel">
       <pose>-0.125 -0.201 -0.06 1.5707 0 0</pose>
 
@@ -153,6 +219,8 @@
         </geometry>
       </visual>
     </link>
+    
+    <!--...................... LINK LEFT REAR WHEEL .......................-->
     <link name="left_rear_wheel">
       <pose>-0.125 0.201 -0.06 1.5707 0 0</pose>
 
@@ -194,6 +262,78 @@
         </geometry>
       </visual>
     </link>
+    
+    <!--...................... LINK LIDAR .......................-->
+    <link name="lidar">
+      <pose>0 0 0.1 0 0 0</pose> <!-- SE PODRÍA HACER UN POSE RELATIVE_TO: CHASSIS -->
+      <inertial>
+        <pose>0 0 0.17121186 0 0 0</pose>
+        <mass>0.83</mass>
+        <inertia>
+          <ixx>0.002853261803275034</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.002853261803275034</iyy>
+          <iyz>0</iyz>
+          <izz>0.0029004988906384237</izz>
+        </inertia>
+      </inertial>
+      <collision name="collision">
+        <pose>0 0 0.17121186 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.08360116</radius>
+            <length>0.14242372</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://p3at/meshes/lidar_3d_v2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    
+    <!--...................... LINK KINECT .......................-->
+    <link name="kinect">
+      <pose>-0.15 0 0.15 0 0 0</pose> <!--SE PODRÍA HACER UN POSE RELATIVE_TO: CHASSIS -->
+      <inertial>
+        <mass>0.1</mass>
+      </inertial>
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>0.073000 0.276000 0.072000</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://p3at/meshes/kinect.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <sensor name="camera" type="depth">
+        <update_rate>20</update_rate>
+        <camera>
+          <horizontal_fov>1.047198</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>3</far>
+          </clip>
+        </camera>
+      </sensor>
+    </link>
+    
+    <!--...................... JOINT RIGHT FRONT WHEEL TO CHASSIS .......................-->
     <joint type="revolute" name="right_front">
       <pose>0 0 0 0 0 0</pose>
       <child>right_front_wheel</child>
@@ -203,6 +343,8 @@
         <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
     </joint>
+    
+    <!--...................... JOINT RIGHT REAR WHEEL TO CHASSIS .......................-->
     <joint type="revolute" name="right_rear">
       <pose>0 0 0 0 0 0</pose>
       <child>right_rear_wheel</child>
@@ -212,6 +354,8 @@
         <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
     </joint>
+    
+    <!--...................... JOINT LEFT FRONT WHEEL TO CHASSIS .......................-->
     <joint type="revolute" name="left_front">
       <pose>0 0 0 0 0 0</pose>
       <child>left_front_wheel</child>
@@ -221,6 +365,8 @@
         <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
     </joint>
+    
+    <!--...................... JOINT LEFT REAR WHEEL TO CHASSIS .......................-->
     <joint type="revolute" name="left_rear">
       <pose>0 0 0 0 0 0</pose>
       <child>left_rear_wheel</child>
@@ -230,6 +376,30 @@
         <use_parent_model_frame>true</use_parent_model_frame>
       </axis>
     </joint>
+    
+    <!--...................... JOINT LIDAR TO CHASSIS .......................-->
+    <joint type="fixed" name="lidar">
+      <pose>0 0 0 0 0 0</pose>
+      <child>lidar</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    
+    <!--...................... JOINT KINECT TO CHASSIS .......................-->
+    <joint type="fixed" name="kinect">
+      <pose>0 0 0 0 0 0</pose>
+      <child>kinect</child>
+      <parent>chassis</parent>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <use_parent_model_frame>true</use_parent_model_frame>
+      </axis>
+    </joint>
+    
+    
     <!-- FALTA INSTALARLO
     <plugin name="SkidSteerDrivePlugin" filename="libSkidSteerDrivePlugin.so">
       <right_front>right_front</right_front>
@@ -239,6 +409,15 @@
       <MaxForce>5.0</MaxForce>
     </plugin>
     -->
+    
+    
+    <!--...................... PLUGIN TO USE LIDAR .......................-->
+    <plugin filename="libignition-gazebo-sensors-system.so"
+      name="ignition::gazebo::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    
+    <!--...................... PLUGIN TO USE DIFFERENTIAL DRIVE .......................-->
     <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
       <left_joint>left_front</left_joint>
       <left_joint>left_rear</left_joint>
@@ -250,7 +429,7 @@
       <topic>/cmd_vel</topic>
     </plugin>
     
-    <!-- Publish robot state information -->
+    <!--...................... PLUGIN TO PUBLISH ROBOT STATE INFORMATION .......................-->
     <plugin filename="libignition-gazebo-pose-publisher-system.so" name="ignition::gazebo::systems::PosePublisher">
       <publish_link_pose>true</publish_link_pose>
       <publish_sensor_pose>true</publish_sensor_pose>
@@ -261,6 +440,8 @@
       <static_publisher>true</static_publisher>
       <static_update_frequency>1</static_update_frequency>
     </plugin>
+    
+    
     <!--    
       <include>
         <uri>model://hokuyo</uri>
@@ -278,5 +459,7 @@
         </axis>
       </joint>
     -->
+    
+    
   </model>
 </sdf>
