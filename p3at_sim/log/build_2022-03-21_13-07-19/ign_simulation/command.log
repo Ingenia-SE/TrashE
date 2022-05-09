@@ -1,6 +1,0 @@
-Invoking command in '/home/pedro/TrashE/p3at_sim/build/ign_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/pedro/TrashE/p3at_sim/src/ign_simulation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pedro/TrashE/p3at_sim/install/ign_simulation
-Invoked command in '/home/pedro/TrashE/p3at_sim/build/ign_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/pedro/TrashE/p3at_sim/src/ign_simulation -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/pedro/TrashE/p3at_sim/install/ign_simulation
-Invoking command in '/home/pedro/TrashE/p3at_sim/build/ign_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/pedro/TrashE/p3at_sim/build/ign_simulation -- -j8 -l8
-Invoked command in '/home/pedro/TrashE/p3at_sim/build/ign_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/pedro/TrashE/p3at_sim/build/ign_simulation -- -j8 -l8
-Invoking command in '/home/pedro/TrashE/p3at_sim/build/ign_simulation': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/pedro/TrashE/p3at_sim/build/ign_simulation
-Invoked command in '/home/pedro/TrashE/p3at_sim/build/ign_simulation' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/pedro/TrashE/p3at_sim/build/ign_simulation
