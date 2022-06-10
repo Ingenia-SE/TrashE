@@ -5,7 +5,7 @@
     <static>false</static>
     
     <!--...................... LINK CHASSIS.......................-->
-    <link name="chassis">
+    <link name="chassis_link">
       <inertial>
         <mass>14.0</mass>
         <inertia>
@@ -32,69 +32,91 @@
         </geometry>
       </visual>
       
-      <!-- ....SENSORS... -->
-      
-      <!-- LIDAR -->
-    	<sensor name='lidar' type='gpu_lidar'>"
-    		<pose>0 0 0.1 0 0 0</pose>
-    		<topic>lidar</topic>
-    		<update_rate>10</update_rate>
-    		<ray>
-        		<scan>
-            		<horizontal>
-                		<samples>640</samples>
-                		<resolution>1</resolution>
-                		<min_angle>-1.396263</min_angle>
-                		<max_angle>1.396263</max_angle>
-            		</horizontal>
-            		<vertical>
-                		<samples>1</samples>
-                		<resolution>0.01</resolution>
-                		<min_angle>0</min_angle>
-                		<max_angle>0</max_angle>
-            		</vertical>
-        		</scan>
-        		<range>
-            		<min>0.08</min>
-            		<max>10.0</max>
-            		<resolution>0.01</resolution>
-        		</range>
-    		</ray>
-    		<always_on>1</always_on>
-    		<visualize>true</visualize>
-    	</sensor>
-    	
-      <!-- KINECT-->
-    	<sensor name="kinect" type="camera">
-		<always_on>1</always_on>
-		<update_rate>30</update_rate>
-		<visualize>1</visualize>
-		<pose>-0.15 0 0.15 0 0 0</pose>
-		<topic>kinect</topic>
-		<camera name="kinect">
-			<horizontal_fov>1.21126</horizontal_fov>
-			<image>
-				<width>640</width>
-				<height>480</height>
-				<format>RGB_INT8</format>
-			</image>
-			<clip>
-				<near>0.1</near>
-				<far>100</far>
-			</clip>
-			<noise>
-				<type>gaussian</type>
-				<mean>0</mean>
-				<stddev>0.007</stddev>
-			</noise>
-				</camera>
-		</sensor>
+      <!-- IMU SENSOR -->
+      <sensor name="imu_sensor" type="imu">
+        <always_on>1</always_on>
+        <update_rate>50</update_rate>
+        <visualize>true</visualize>
+        <topic>imu</topic>
+        <imu>
+          <enable_orientation>0</enable_orientation>
+          <angular_velocity>
+            <x>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.009</stddev>
+                <bias_mean>0.00075</bias_mean>
+                <bias_stddev>0.005</bias_stddev>
+                <dynamic_bias_stddev>0.00002</dynamic_bias_stddev>
+                <dynamic_bias_correlation_time>400.0</dynamic_bias_correlation_time>
+                <precision>0.00025</precision>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.009</stddev>
+                <bias_mean>0.00075</bias_mean>
+                <bias_stddev>0.005</bias_stddev>
+                <dynamic_bias_stddev>0.00002</dynamic_bias_stddev>
+                <dynamic_bias_correlation_time>400.0</dynamic_bias_correlation_time>
+                <precision>0.00025</precision>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.009</stddev>
+                <bias_mean>0.00075</bias_mean>
+                <bias_stddev>0.005</bias_stddev>
+                <dynamic_bias_stddev>0.00002</dynamic_bias_stddev>
+                <dynamic_bias_correlation_time>400.0</dynamic_bias_correlation_time>
+                <precision>0.00025</precision>
+              </noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.021</stddev>
+                <bias_mean>0.05</bias_mean>
+                <bias_stddev>0.0075</bias_stddev>
+                <dynamic_bias_stddev>0.000375</dynamic_bias_stddev>
+                <dynamic_bias_correlation_time>175.0</dynamic_bias_correlation_time>
+                <precision>0.005</precision>
+              </noise>
+            </x>
+            <y>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.021</stddev>
+                <bias_mean>0.05</bias_mean>
+                <bias_stddev>0.0075</bias_stddev>
+                <dynamic_bias_stddev>0.000375</dynamic_bias_stddev>
+                <dynamic_bias_correlation_time>175.0</dynamic_bias_correlation_time>
+                <precision>0.005</precision>
+              </noise>
+            </y>
+            <z>
+              <noise type="gaussian">
+                <mean>0</mean>
+                <stddev>0.021</stddev>
+                <bias_mean>0.05</bias_mean>
+                <bias_stddev>0.0075</bias_stddev>
+                <dynamic_bias_stddev>0.000375</dynamic_bias_stddev>
+                <dynamic_bias_correlation_time>175.0</dynamic_bias_correlation_time>
+                <precision>0.005</precision>
+              </noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+      </sensor>
     </link>
     
     <!--...................... LINK RIGHT FRONT WHEEL .......................-->
-    <link name="right_front_wheel">
+    <link name="right_front_wheel_link">
       <pose>0.125 -0.201 -0.06 1.5707 0 0</pose>
-
       <inertial>
         <mass>1.5</mass>
         <inertia>
@@ -106,7 +128,6 @@
           <iyz>0</iyz>
         </inertia>
       </inertial>
-
       <collision name="collision">
         <geometry>
           <cylinder>
@@ -135,9 +156,8 @@
     </link>
     
     <!--...................... LINK LEFT FRONT WHEEL .......................-->
-    <link name="left_front_wheel">
+    <link name="left_front_wheel_link">
       <pose>0.125 0.201 -0.06 1.5707 0 0</pose>
-
       <inertial>
         <mass>1.5</mass>
         <inertia>
@@ -149,7 +169,6 @@
           <iyz>0</iyz>
         </inertia>
       </inertial>
-
       <collision name="collision">
         <geometry>
           <cylinder>
@@ -178,9 +197,8 @@
     </link>
     
     <!--...................... LINK RIGHT REAR WHEEL .......................-->
-    <link name="right_rear_wheel">
+    <link name="right_rear_wheel_link">
       <pose>-0.125 -0.201 -0.06 1.5707 0 0</pose>
-
       <inertial>
         <mass>1.5</mass>
         <inertia>
@@ -192,7 +210,6 @@
           <iyz>0</iyz>
         </inertia>
       </inertial>
-
       <collision name="collision">
         <geometry>
           <cylinder>
@@ -221,9 +238,8 @@
     </link>
     
     <!--...................... LINK LEFT REAR WHEEL .......................-->
-    <link name="left_rear_wheel">
+    <link name="left_rear_wheel_link">
       <pose>-0.125 0.201 -0.06 1.5707 0 0</pose>
-
       <inertial>
         <mass>1.5</mass>
         <inertia>
@@ -235,7 +251,6 @@
           <iyz>0</iyz>
         </inertia>
       </inertial>
-
       <collision name="collision">
         <geometry>
           <cylinder>
@@ -264,7 +279,7 @@
     </link>
     
     <!--...................... LINK LIDAR .......................-->
-    <link name="lidar">
+    <link name="lidar_link">
       <pose>0 0 0.1 0 0 0</pose> <!-- SE PODRÍA HACER UN POSE RELATIVE_TO: CHASSIS -->
       <inertial>
         <pose>0 0 0.17121186 0 0 0</pose>
@@ -294,10 +309,37 @@
           </mesh>
         </geometry>
       </visual>
+    	<sensor name='lidar_sensor' type='gpu_lidar'>"
+    		<topic>lidar_topic</topic>
+    		<update_rate>10</update_rate>
+    		<ray>
+        		<scan>
+            		<horizontal>
+                		<samples>640</samples>
+                		<resolution>1</resolution>
+                		<min_angle>-1.396263</min_angle>
+                		<max_angle>1.396263</max_angle>
+            		</horizontal>
+            		<vertical>
+                		<samples>1</samples>
+                		<resolution>0.01</resolution>
+                		<min_angle>0</min_angle>
+                		<max_angle>0</max_angle>
+            		</vertical>
+        		</scan>
+        		<range>
+            		<min>0.08</min>
+            		<max>10.0</max>
+            		<resolution>0.01</resolution>
+        		</range>
+    		</ray>
+    		<always_on>1</always_on>
+    		<visualize>true</visualize>
+    	</sensor>
     </link>
     
     <!--...................... LINK KINECT .......................-->
-    <link name="kinect">
+    <link name="kinect_link">
       <pose>-0.15 0 0.15 0 0 0</pose> <!--SE PODRÍA HACER UN POSE RELATIVE_TO: CHASSIS -->
       <inertial>
         <mass>0.1</mass>
@@ -316,7 +358,7 @@
           </mesh>
         </geometry>
       </visual>
-      <sensor name="camera" type="depth">
+      <sensor name="kinect_sensor" type="depth">
         <update_rate>20</update_rate>
         <camera>
           <horizontal_fov>1.047198</horizontal_fov>
@@ -334,10 +376,10 @@
     </link>
     
     <!--...................... JOINT RIGHT FRONT WHEEL TO CHASSIS .......................-->
-    <joint type="revolute" name="right_front">
+    <joint type="revolute" name="right_front_wheel_chassis_joint">
       <pose>0 0 0 0 0 0</pose>
-      <child>right_front_wheel</child>
-      <parent>chassis</parent>
+      <child>right_front_wheel_link</child>
+      <parent>chassis_link</parent>
       <axis>
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>true</use_parent_model_frame>
@@ -345,10 +387,10 @@
     </joint>
     
     <!--...................... JOINT RIGHT REAR WHEEL TO CHASSIS .......................-->
-    <joint type="revolute" name="right_rear">
+    <joint type="revolute" name="right_rear_wheel_chassis_joint">
       <pose>0 0 0 0 0 0</pose>
-      <child>right_rear_wheel</child>
-      <parent>chassis</parent>
+      <child>right_rear_wheel_link</child>
+      <parent>chassis_link</parent>
       <axis>
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>true</use_parent_model_frame>
@@ -356,10 +398,10 @@
     </joint>
     
     <!--...................... JOINT LEFT FRONT WHEEL TO CHASSIS .......................-->
-    <joint type="revolute" name="left_front">
+    <joint type="revolute" name="left_front_wheel_chassis_joint">
       <pose>0 0 0 0 0 0</pose>
-      <child>left_front_wheel</child>
-      <parent>chassis</parent>
+      <child>left_front_wheel_link</child>
+      <parent>chassis_link</parent>
       <axis>
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>true</use_parent_model_frame>
@@ -367,10 +409,10 @@
     </joint>
     
     <!--...................... JOINT LEFT REAR WHEEL TO CHASSIS .......................-->
-    <joint type="revolute" name="left_rear">
+    <joint type="revolute" name="left_rear_wheel_chassis_joint">
       <pose>0 0 0 0 0 0</pose>
-      <child>left_rear_wheel</child>
-      <parent>chassis</parent>
+      <child>left_rear_wheel_link</child>
+      <parent>chassis_link</parent>
       <axis>
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>true</use_parent_model_frame>
@@ -378,10 +420,10 @@
     </joint>
     
     <!--...................... JOINT LIDAR TO CHASSIS .......................-->
-    <joint type="fixed" name="lidar">
+    <joint type="fixed" name="lidar_chassis_joint">
       <pose>0 0 0 0 0 0</pose>
-      <child>lidar</child>
-      <parent>chassis</parent>
+      <child>lidar_link</child>
+      <parent>chassis_link</parent>
       <axis>
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>true</use_parent_model_frame>
@@ -389,10 +431,10 @@
     </joint>
     
     <!--...................... JOINT KINECT TO CHASSIS .......................-->
-    <joint type="fixed" name="kinect">
+    <joint type="fixed" name="kinect_chassis_joint">
       <pose>0 0 0 0 0 0</pose>
-      <child>kinect</child>
-      <parent>chassis</parent>
+      <child>kinect_link</child>
+      <parent>chassis_link</parent>
       <axis>
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>true</use_parent_model_frame>
@@ -418,11 +460,14 @@
     </plugin>
     
     <!--...................... PLUGIN TO USE DIFFERENTIAL DRIVE .......................-->
+    <!--
+    ign topic -t "/cmd_vel" -m ignition.msgs.Twist -p "linear: {x:0.5}, angular: {z:0.05}"
+    -->
     <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
-      <left_joint>left_front</left_joint>
-      <left_joint>left_rear</left_joint>
-      <right_joint>right_front</right_joint>
-      <right_joint>right_rear</right_joint>
+      <left_joint>left_front_wheel_chassis_joint</left_joint>
+      <left_joint>left_rear_wheel_chassis_joint</left_joint>
+      <right_joint>right_front_wheel_chassis_joint</right_joint>
+      <right_joint>right_rear_wheel_chassis_joint</right_joint>
       <wheel_separation>0.402</wheel_separation>
       <wheel_radius>0.110</wheel_radius>
       <odom_publish_frequency>1000</odom_publish_frequency>
@@ -439,6 +484,10 @@
       <use_pose_vector_msg>true</use_pose_vector_msg>
       <static_publisher>true</static_publisher>
       <static_update_frequency>1</static_update_frequency>
+    </plugin>
+    
+     <!--.............. PLUGIN TO USE IMU ................-->
+    <plugin filename="libignition-gazebo-imu-system.so" name="ignition::gazebo::systems::Imu">
     </plugin>
     
     
