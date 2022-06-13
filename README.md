@@ -18,7 +18,10 @@ code of the Ignition Gazebo simulation of the Pioneer 3 AT, a robot with the sam
 # Documentation:
 It contains useful documents for the project such as the Project Report, the System Requirements, the System Engineering Management Plan, etc.
 
-In addition, each section includes its own README file and corresponding documents together with user manuals.
-
 # Control Higgs 2.0: 
 It contains the Ros-Arduino code to control the Motors
+
+
+
+
+In addition, each section includes its own README file and corresponding documents together with user manuals.
