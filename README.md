@@ -13,26 +13,7 @@ It contains the model of the system made in MATLAB System Composer.
 Code developed when making the official Ignition Gazebo tutorials together with some notes taken with various problems and their solutions.
 
 # p3at_sim:
-p3at_sim/src/ign_simulation contains code of the Ignition Gazebo simulation of the Pioneer 3 AT, a robot with the same structure as the Higgs 2.0.
-
-This folder has a division in 3 principal/most important subfolders:
-
-•	model/p3at: it contains the files of the different components and sensors that make up the pioneer3 AT. In this subfolder you can also find the model.sdf which is the main file where the different components are virtually designed and parameterised and joined between them, and Ignition plugins are added.
-
-•	worlds: contains the sdf file for each of the worlds used, with all of its parameters.
-
-•	launch: contains the python executable to start the simulation in each of the worlds.
-
-To create a directory and clone the TrashE GitHub repository, type the following commands in the terminal:
-mkdir -p ~/TrashE/src
-cd TrashE/src
-git clone git@github.com:Ingenia-SE/TrashE.git
-cd ..
-sudo apt install python3-colcon-common-extensions (only once to install colcon)
-colcon build –symlink-install
-. install/setup.bash
-
-(More information in the Simulation User Manual located at p3at_sim/src/ign_simulation)
+code of the Ignition Gazebo simulation of the Pioneer 3 AT, a robot with the same structure as the Higgs 2.0.
 
 # Documentation:
 It contains useful documents for the project such as the Project Report, the System Requirements, the System Engineering Management Plan, etc.
