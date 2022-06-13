@@ -1,5 +1,5 @@
 ## Model Higgs 2.0
-Contains 
+It contains the model of the system made in MATLAB System Composer.
 
 The system design has been done in two steps. The first one is a descriptive block structure of the
 hardware and functional architectures, including stereotypes, properties, and links to requirements of
