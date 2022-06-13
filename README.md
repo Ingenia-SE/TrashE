@@ -24,15 +24,15 @@ This folder has a division in 3 principal/most important subfolders:
 •	launch: contains the python executable to start the simulation in each of the worlds.
 
 To create a directory and clone the TrashE GitHub repository, type the following commands in the terminal:
->> mkdir -p ~/TrashE/src
->> cd TrashE/src
->> git clone git@github.com:Ingenia-SE/TrashE.git
->> cd ..
->> sudo apt install python3-colcon-common-extensions (only once to install colcon) 
->> colcon build –symlink-install
->> . install/setup.bash
+mkdir -p ~/TrashE/src
+cd TrashE/src
+git clone git@github.com:Ingenia-SE/TrashE.git
+cd ..
+sudo apt install python3-colcon-common-extensions (only once to install colcon)
+colcon build –symlink-install
+. install/setup.bash
 
-(More information in the User manual located at p3at_sim/src/ign_simulation)
+(More information in the Simulation User Manual located at p3at_sim/src/ign_simulation)
 
 # Documentation:
 It contains useful documents for the project such as the Project Report, the System Requirements, the System Engineering Management Plan, etc.
